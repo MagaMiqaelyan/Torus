@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace Torus
 {
@@ -6,12 +9,17 @@ namespace Torus
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please input Torus size\nN = ");
-            var torus = new Torus(int.Parse(Console.ReadLine()));
-            torus.Build();
-            torus.Topple();
+            Console.WriteLine("Please input size\nN = ");
+            var n = int.Parse(Console.ReadLine());
+            var graph = new GraphCycle();
+            graph.CreateCycle(n);
+            //var torus = new Torus(n);
+            //torus.Build();
+            //torus.Topple();
             Console.ReadKey();
         }
+
+
     }
 
 }

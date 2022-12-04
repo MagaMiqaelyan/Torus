@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GraphCycle.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
