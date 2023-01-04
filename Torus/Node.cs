@@ -10,6 +10,8 @@
         public Node Down { get; set; }
         public bool IsEdge { get; set; }
 
+        public float Index { get; set; }
+
         public Node(Position pos, int weight = 0, bool isEdge = false)
         {
             Position = pos;

@@ -1,21 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace Torus
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Please input size\nN = ");
-            var n = int.Parse(Console.ReadLine());
-            var graph = new GraphCycle();
-            graph.CreateCycle(n);
-            //var torus = new Torus(n);
-            //torus.Build();
-            //torus.Topple();
+            Console.BufferHeight = Int16.MaxValue - 1;
+            while (true)
+            {
+                Console.Write("Please input size\nN = ");
+                var n = int.Parse(Console.ReadLine());
+                Console.Write("Please input period times\nT = ");
+                var t = int.Parse(Console.ReadLine());
+                if (n == 0) break;
+                var graph = new GraphCycle();
+                await graph.CreateCycle(n, t);
+                //var torus = new Torus(n);
+                //torus.Build();
+                //torus.Topple();
+            }
             Console.ReadKey();
         }
 

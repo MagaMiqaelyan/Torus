@@ -17,6 +17,8 @@ namespace Torus
             overweight = new Queue<Position>();
         }
 
+        public int[,] GetGrid => grid;
+
         public SandPile(int n, int[,] grid) : this(n)
         {
             for (int i = 0; i < n; i++)
@@ -30,7 +32,6 @@ namespace Torus
             }
         }
 
-        public int[,] GetGrid => grid;
         public void Topple()
         {
             while (overweight.Count > 0)
